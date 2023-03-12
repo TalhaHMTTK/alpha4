@@ -1,3 +1,4 @@
+
 <h2 class="text-center mt-4"><%= @article.title %></h2>
 
 <div class="container">
@@ -8,6 +9,8 @@
   <div class="card-header font-italic">
     by Talha Tariq
   </div>
+
+
   <div class="card-body">
    <div class="card-text text-left"><%= simple_format(@article.description) %></div>
     <%= link_to 'Edit',edit_article_path(@article), class:"btn btn-outline-primary" %> 
@@ -17,7 +20,11 @@
     <small>Created <%= time_ago_in_words(@article.created_at) %>ago, Updated <%= time_ago_in_words(@article.updated_at) %>ago</small>
   </div>
  </div>
+
+
  </div>
 </div>
 
 </div>
+
+
