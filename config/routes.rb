@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   root 'pages#home'
   get 'about', to: 'pages#about'
- # delete '/articles/:id', to: 'articles#destroy', as: 'delete_article'
-
   resources :articles
+  get 'signup', to: 'users#new'
+  post 'users', to: 'users#create'
+  resources :users, except: [:new]
 end
 
 
